@@ -36,7 +36,7 @@ const renderPdf = async ({
     await page.emulateMedia(emulateMedia);
     await page.pdf({
       ...pdfOptions,
-      footerTemplate: '<div><div class='pageNumber'></div> <div>/</div><div class='totalPages'></div></div>',
+      footerTemplate: "<div><div class='pageNumber'></div> <div>/</div><div class='totalPages'></div></div>",
       preferCSSPageSize: true,
       path: path.resolve(pathToPublic),
     });
