@@ -36,6 +36,7 @@ const renderPdf = async ({
     await page.emulateMedia(emulateMedia);
     await page.pdf({
       ...pdfOptions,
+      preferCSSPageSize: true,
       path: path.resolve(pathToPublic),
     });
 
